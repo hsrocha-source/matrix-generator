@@ -14,6 +14,9 @@ def generate_matrix_n(n):
         matrix.append(vector)
     return matrix
 def main():
-    value = int(input("Insert an integer value: "))
+    value = int(input("Insert an integer value between 0 and 99: "))
+    if value < 0 or value > 99:
+        print("The input number is invalid")
+        return 0
     generate_matrix_n(value)
 main()
